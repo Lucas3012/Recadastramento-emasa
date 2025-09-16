@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recadastramento de Funcionários</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recadastramento de Funcionários</h1>
+
+        <div class="tab-buttons">
+            <button id="showRegistration" class="active">
+                <i class="fas fa-user-plus"></i> Cadastrar
+            </button>
+            <button id="showHistory">
+                <i class="fas fa-history"></i> Histórico
+            </button>
+            <button id="showWhatsapp">
+                <i class="fab fa-whatsapp"></i> Enviar Docs
+            </button>
+        </div>
+
+        <div id="registration">
+            <form id="employeeForm">
+                <div class="form-group">
+                    <label for="name">Nome Completo:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="position">Cargo:</label>
+                    <input type="text" id="position" required>
+                </div>
+                <div class="form-group">
+                    <label for="sector">Setor:</label>
+                    <input type="text" id="sector" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone:</label>
+                    <input type="text" id="phone" required>
+                </div>
+                <button type="submit">Cadastrar</button>
+            </form>
+            
+            <div class="image-container">
+                <img src="images.jpeg" alt="Descrição da sua imagem">
+            </div>
+            
+        </div>
+
+        <div id="history" class="hidden">
+            <div class="employees-list">
+                <table id="employeeTable">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Cargo</th>
+                            <th>Setor</th> <th>Email</th>
+                            <th>Telefone</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+                <div id="employees-card-list">
+                    </div>
+            </div>
+        </div>
+        
+        <div id="whatsapp" class="hidden">
+            <form id="whatsappForm">
+                <p>Preencha os dados e clique no botão para enviar o link para um contato no WhatsApp. Você poderá anexar os documentos manualmente no aplicativo.</p>
+                <div class="form-group">
+                    <label for="whatsapp-name">Nome do Funcionário:</label>
+                    <input type="text" id="whatsapp-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp-id">Matrícula:</label>
+                    <input type="text" id="whatsapp-id" required>
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp-docs">Tipo de Documento:</label>
+                    <input type="text" id="whatsapp-docs" required placeholder="Ex: RG, CNH, Comprovante de Residência">
+                </div>
+                <button type="submit">Abrir WhatsApp</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
